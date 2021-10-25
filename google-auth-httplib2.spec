@@ -45,7 +45,7 @@ Python 3 client library for accessing Google APIs.
 
 %changelog
 * Mon Oct 25 2021 Mikel Olasagasti Uranga <mikel@olasagasti.info> - 0.1.0-1
-- Version bump
+- Version bump and switch to pyproject-rpm-macros
 
 * Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.0.3-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
