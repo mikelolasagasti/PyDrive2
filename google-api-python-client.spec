@@ -25,20 +25,6 @@ Python client library for accessing Google APIs.
 %package -n python3-%{srcname}
 Summary:        %{sum}
 
-#BuildRequires:  python3-devel >= 3.3
-#BuildRequires:  python3-setuptools
-#BuildRequires:  python3-httplib2 >= 0.9.2
-#BuildRequires:  python3-oauth2client >= 2.0.0
-#BuildRequires:  python3-uritemplate >= 3.0.0
-#BuildRequires:  python3-six >= 1.6.1
-
-#Requires:       python3-httplib2 >= 0.9.2
-#Requires:       python3-oauth2client >= 2.0.0
-#Requires:       python3-uritemplate >= 3.0.0
-#Requires:       python3-six >= 1.6.1
-#Requires:       python3-google-api-core
-#Requires:       python3-google-auth-httplib2 >= 0.0.3
-
 %description -n python3-%{srcname}
 Written by Google, this library provides a small, flexible, and powerful 
 Python 3 client library for accessing Google APIs.
@@ -48,19 +34,6 @@ Python 3 client library for accessing Google APIs.
 
 %generate_buildrequires
 %pyproject_buildrequires -r
-
-# remove unusable google-api-client requires
-# sed -i /google-api-core/d setup.py
-
-# remove egg info
-# rm -rf google_api_python_client.egg-info
-
-# remove shebang without touching timestamp
-#for lib in googleapiclient/*.py; do
-# sed '1{\@^#!/usr/bin/python@d}' $lib > $lib.new &&
-# touch -r $lib $lib.new &&
-# mv $lib.new $lib
-#done
 
 %build
 %pyproject_wheel
@@ -75,7 +48,7 @@ Python 3 client library for accessing Google APIs.
 
 %changelog
 * Mon Oct 25 2021 Mikel Olasagasti Uranga <mikel@olasagasti.info> - 2:2.27.0-1
-- Version bump
+- Version bump and switch to pyproject-rpm-macros
 
 * Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 2:1.6.7-16
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
