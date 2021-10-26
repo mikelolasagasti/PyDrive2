@@ -17,13 +17,6 @@ Google Drive API Python wrapper library. Maintained fork of PyDrive.
 %package -n     python3-%{name}
 Summary:        %{summary}
 
-# required for check
-BuildRequires:  pytest
-BuildRequires:  python3dist(fsspec)
-BuildRequires:  python3dist(funcy)
-#BuildRequires:  python3dist(timeout_decorator)
-BuildRequires:  python3dist(tqdm)
-
 %description -n python3-%{name}
 Google Drive API Python wrapper library. Maintained fork of PyDrive.
 
@@ -40,9 +33,7 @@ Google Drive API Python wrapper library. Maintained fork of PyDrive.
 %pyproject_install
 %pyproject_save_files pydrive2
 
-# ignoring for now as requires timeout_decorator
-#%%check
-#%%pytest
+# No check as requires credentials for GoogleAuth
 
 %files -n python3-%{name} -f %{pyproject_files}
 %doc README.rst
