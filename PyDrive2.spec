@@ -11,6 +11,9 @@ BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:  pyproject-rpm-macros
 
+# PyDrive2 is a fork of archived PyDrive project
+Obsoletes: python3-PyDrive <= 1.3.1
+
 %description
 Google Drive API Python wrapper library. Maintained fork of PyDrive.
 
