@@ -3,7 +3,7 @@ Version:        1.10.0
 Release:        1%{?dist}
 Summary:        Google Drive API Python wrapper library, maintained fork of PyDrive
 
-License:        ASL-2.0 and BSD
+License:        ASL 2.0
 URL:            https://github.com/iterative/PyDrive2
 Source0:        %{url}/archive/%{version}/PyDrive2-%{version}.tar.gz
 BuildArch:      noarch
